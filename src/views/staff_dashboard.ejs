@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Data warehouse system | Staff Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .bg-color {
+        background-color: rgb(228, 86, 121);
+      }
+
+      .color {
+        color: rgb(228, 86, 121);
+      }
+        nav {
+            background-color: rgb(228, 86, 121);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        section {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .sec1 button {
+        background-color: rgb(228, 86, 121);
+        border: none;
+        outline: solid 2px wheat;
+        padding: 40px;
+        padding-left: 80px;
+        padding-right: 80px;
+        border-radius: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+      }
+      td, th {
+        padding: 2px;
+        text-align: center;
+        border: solid 2px black;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Medical Centre Data Warehouse System for the University of Calabar</h1>
+        <br>
+        <h2 style="font-style: italic;">Staff Dashboard</h2>
+    </nav>
+
+    <br>
+
+    <section class="sec1">
+        <a href="/all-patients"
+          ><button>
+            <%= locals.allPatients.length %> <br />
+            Patients <br />
+          </button></a
+        >
+      </section>
+  
+      <br />
+
+
+      <div style="display: flex; justify-content: center">
+        <div>
+          <h1 style="color: rgb(228, 86, 121)">Patients list</h1>
+          <br />
+          <table >
+            <tbody id="eligiblePersonnels">
+              <% if (allPatients.length < 1) { %>
+              <h4 style="color: rgb(44, 41, 41)">No Patient</h4>
+              <% } else { %>
+              <tr>
+                <th>Profile Pic</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>dob</th>
+                <th>Gender</th>
+                <th>Blood Type</th>
+                <th>Address</th>
+                <th>Emergency Contact</th>
+                <th>Action</th>
+              </tr>
+              <% allPatients.forEach(patient=> { %>
+              <tr>
+                <td>
+                  <img src="<%= patient.profilePic %>" width="50" height="50" />
+                </td>
+                <td><%= patient.full_name %></td>
+                <td><%= patient.email %></td>
+                <td><%= patient.phone_number %></td>
+                <td><%= patient.date_of_birth %></td>
+                <td><%= patient.gender %></td>
+                <td><%= !patient.blood_type ? 'N/A': patient.blood_type %></td>
+                <td><%= patient.address %></td>
+                <td><%= !patient.emergency_contact ? 'N/A': patient.emergency_contact %></td>
+                <td> <a href="#" class="btn" style="border: solid 2px rgb(228, 86, 121);" data-bs-toggle="modal" data-bs-target="#actionsModal<%= patient.patient_id %>">View actions</a></td>
+              </tr>
+
+              <!-- Modal -->
+<div class="modal fade" id="actionsModal<%= patient.patient_id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Actions</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <br>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Medical record</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Assign Treatment</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">View Medical History</button>
+            </li>
+          </ul>
+
+          <!-- Tab contents -->
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="modal-body">
+                    <form action="/add-medical-record" method="post">
+                    
+                      <input type="hidden" name="doctorId" value="<%= staff.user_id %>" required>
+                      <input type="hidden" name="patientId" value="<%= patient.patient_id %>" required>
+                      <div class="mb-3">
+                          <label for="diagnosis" class="form-label">Diagnosis:</label>
+                          <textarea name="diagnosis" id="diagnosis" class="form-control" required></textarea>
+                        </div>
+            
+                        <div class="mb-3">
+                          <label for="treatmentPlan" class="form-label">Treatment Plan:</label>
+                          <textarea name="treatmentPlan" id="treatmentPlan" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                          <button type="submit" class="btn bg-color text-white">Submit</button>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="modal-body">
+                  <form action="/add-treatment" method="post">
+                    
+                    <input type="hidden" name="patientId" value="<%= patient.patient_id %>" required>
+                    
+                    <div class="mb-3">
+                        <label for="treatmentDescription" class="form-label">Treatment Description:</label>
+                        <textarea name="treatmentDescription" id="treatmentDescription" class="form-control"></textarea>
+                      </div>
+          
+                      <div class="mb-3">
+                        <label for="outcome" class="form-label">Outcome:</label>
+                        <textarea name="outcome" id="outcome" class="form-control"></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <button type="submit" class="btn bg-color text-white">Submit</button>
+                      </div>
+                  </form>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="modal-body">
+                  <div>
+                    <h4>Malaria</h4>
+                    <p>Anartem</p>
+                  </div>
+                  <hr>
+                  <div>
+                    <h4>Malaria</h4>
+                    <p>Anartem</p>
+                  </div>
+                  <hr>
+                  </div>
+            </div>
+          </div>
+          </div>
+    </div>
+  </div>
+              <% }) %>
+               <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

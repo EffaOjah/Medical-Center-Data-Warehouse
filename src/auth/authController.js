@@ -9,6 +9,8 @@ const util = require('util');
 
 const query = util.promisify(connection.query).bind(connection);
 
+const jwt = require('../jwt/jwtSign');
+
 // Get the login page
 module.exports.login_get = (req, res) => {
     let role = req.params.role;
@@ -44,7 +46,15 @@ module.exports.admin_login_post = async (req, res) => {
         console.log('Password is correct');
 
         // Now authenticate the user
+        // Generate the jwtToken for the admin
+        const adminToken = await jwt.generateJwtToken(user.user_id);
+        console.log('AdmintToken: ', adminToken);
 
+        // Set cookie
+        res.cookie('AdminToken', adminToken, { maxAge: 60 * 60 * 24 * 365 }); // Cookie expires in one year
+
+        // Redirect to the admin dashboard
+        res.redirect(`/admin/dashboard`);
     } catch (error) {
         console.log('Internal Server Error: ', error);
         return res.redirect(`/login/${role}`);
@@ -79,7 +89,15 @@ module.exports.staff_login_post = async (req, res) => {
         console.log('Password is correct');
 
         // Now authenticate the user
+        // Generate the jwtToken for the admin
+        const staffToken = await jwt.generateJwtToken(user.user_id);
+        console.log('StaffToken: ', staffToken);
 
+        // Set cookie
+        res.cookie('StaffToken', staffToken, { maxAge: 60 * 60 * 24 * 365 }); // Cookie expires in one year
+
+        // Redirect to the admin dashboard
+        res.redirect(`/staff/dashboard`);
     } catch (error) {
         console.log('Internal Server Error: ', error);
         return res.redirect(`/login/${role}`);
@@ -114,7 +132,15 @@ module.exports.patient_login_post = async (req, res) => {
         console.log('Password is correct');
 
         // Now authenticate the user
+        // Generate the jwtToken for the admin
+        const userToken = await jwt.generateJwtToken(user.user_id);
+        console.log('UserToken: ', userToken);
 
+        // Set cookie
+        res.cookie('UserToken', userToken, { maxAge: 60 * 60 * 24 * 365 }); // Cookie expires in one year
+
+        // Redirect to the admin dashboard
+        res.redirect(`/user/dashboard`);
     } catch (error) {
         console.log('Internal Server Error: ', error);
         return res.redirect(`/login/${role}`);
