@@ -1,0 +1,149 @@
+[
+    {
+        "fullName": "Dr. Michael Adeyemi",
+        "email": "michael.adeyemi@example.com",
+        "phoneNumber": "08123456789",
+        "specialization": "Cardiologist",
+        "yearsOfExperience": 10
+    },
+    {
+        "fullName": "Dr. Sophia Okafor",
+        "email": "sophia.okafor@example.com",
+        "phoneNumber": "08098765432",
+        "specialization": "Dermatologist",
+        "yearsOfExperience": 8
+    },
+    {
+        "fullName": "Dr. Emeka Nwosu",
+        "email": "emeka.nwosu@example.com",
+        "phoneNumber": "09034567891",
+        "specialization": "Orthopedic Surgeon",
+        "yearsOfExperience": 12
+    },
+    {
+        "fullName": "Dr. Fatima Bello",
+        "email": "fatima.bello@example.com",
+        "phoneNumber": "07011223344",
+        "specialization": "Pediatrician",
+        "yearsOfExperience": 6
+    },
+    {
+        "fullName": "Dr. Chinedu Eze",
+        "email": "chinedu.eze@example.com",
+        "phoneNumber": "08155667788",
+        "specialization": "Neurologist",
+        "yearsOfExperience": 9
+    },
+    {
+        "fullName": "Dr. Aisha Danjuma",
+        "email": "aisha.danjuma@example.com",
+        "phoneNumber": "08022334455",
+        "specialization": "Gynecologist",
+        "yearsOfExperience": 7
+    },
+    {
+        "fullName": "Dr. Oluwaseun Adebayo",
+        "email": "oluwaseun.adebayo@example.com",
+        "phoneNumber": "09066778899",
+        "specialization": "Oncologist",
+        "yearsOfExperience": 11
+    },
+    {
+        "fullName": "Dr. Blessing Udo",
+        "email": "blessing.udo@example.com",
+        "phoneNumber": "07099887766",
+        "specialization": "Psychiatrist",
+        "yearsOfExperience": 5
+    },
+    {
+        "fullName": "Dr. Henry Obinna",
+        "email": "henry.obinna@example.com",
+        "phoneNumber": "08177665544",
+        "specialization": "Urologist",
+        "yearsOfExperience": 8
+    },
+    {
+        "fullName": "Dr. Samuel Ekanem",
+        "email": "samuel.ekanem@example.com",
+        "phoneNumber": "09033445566",
+        "specialization": "Endocrinologist",
+        "yearsOfExperience": 10
+    },
+    {
+        "fullName": "Dr. Rebecca Ojo",
+        "email": "rebecca.ojo@example.com",
+        "phoneNumber": "08055667788",
+        "specialization": "Ophthalmologist",
+        "yearsOfExperience": 9
+    },
+    {
+        "fullName": "Dr. Kingsley Adebanjo",
+        "email": "kingsley.adebanjo@example.com",
+        "phoneNumber": "08199887766",
+        "specialization": "Pulmonologist",
+        "yearsOfExperience": 6
+    },
+    {
+        "fullName": "Dr. Stella Obi",
+        "email": "stella.obi@example.com",
+        "phoneNumber": "07022335544",
+        "specialization": "Hematologist",
+        "yearsOfExperience": 8
+    },
+    {
+        "fullName": "Dr. Ahmed Yusuf",
+        "email": "ahmed.yusuf@example.com",
+        "phoneNumber": "09011223344",
+        "specialization": "Nephrologist",
+        "yearsOfExperience": 10
+    },
+    {
+        "fullName": "Dr. Patricia Nwachukwu",
+        "email": "patricia.nwachukwu@example.com",
+        "phoneNumber": "08144556677",
+        "specialization": "General Surgeon",
+        "yearsOfExperience": 12
+    },
+    {
+        "fullName": "Dr. Gideon Ayodele",
+        "email": "gideon.ayodele@example.com",
+        "phoneNumber": "08066778899",
+        "specialization": "Rheumatologist",
+        "yearsOfExperience": 7
+    },
+    {
+        "fullName": "Dr. Funke Oladejo",
+        "email": "funke.oladejo@example.com",
+        "phoneNumber": "07011224455",
+        "specialization": "Radiologist",
+        "yearsOfExperience": 6
+    },
+    {
+        "fullName": "Dr. Joshua Anene",
+        "email": "joshua.anene@example.com",
+        "phoneNumber": "09088997766",
+        "specialization": "Gastroenterologist",
+        "yearsOfExperience": 9
+    },
+    {
+        "fullName": "Dr. Esther Ibe",
+        "email": "esther.ibe@example.com",
+        "phoneNumber": "08177889900",
+        "specialization": "Pathologist",
+        "yearsOfExperience": 5
+    },
+    {
+        "fullName": "Dr. Anthony Chukwu",
+        "email": "anthony.chukwu@example.com",
+        "phoneNumber": "08033445522",
+        "specialization": "Anesthesiologist",
+        "yearsOfExperience": 11
+    },
+    {
+        "fullName": "Dr. Vera Okon",
+        "email": "vera.okon@example.com",
+        "phoneNumber": "08033445522",
+        "specialization": "Anesthesiologist",
+        "yearsOfExperience": 11
+    }
+]

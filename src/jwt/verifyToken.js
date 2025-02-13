@@ -82,7 +82,7 @@ module.exports.verifyUserToken = (req, res, next) => {
         console.log('Token is not provided');
         
         // Redirect to the user login route
-        return res.redirect('/login/user');
+        return res.redirect('/login/patient');
     }
 
     // If token is provided, verify it
@@ -91,7 +91,7 @@ module.exports.verifyUserToken = (req, res, next) => {
             console.log('Invalid token');
 
             // Redirect to the user login route
-            return res.redirect('/login/user');
+            return res.redirect('/login/patient');
         }
 
         // Get the user's details

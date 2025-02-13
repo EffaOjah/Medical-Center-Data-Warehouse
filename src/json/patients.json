@@ -1,0 +1,178 @@
+[
+    {
+        "fullName": "John Doe",
+        "email": "john.doe@example.com",
+        "phoneNo": "08123456789",
+        "dateOfBirth": "1990/03/15",
+        "gender": "male",
+        "address": "45 Unity Rd, Lagos, Nigeria"
+    },
+    {
+        "fullName": "Grace Okoro",
+        "email": "grace.okoro@example.com",
+        "phoneNo": "09098765432",
+        "dateOfBirth": "1985/08/22",
+        "gender": "female",
+        "address": "12 Peace Ave, Abuja, Nigeria"
+    },
+    {
+        "fullName": "David Adeyemi",
+        "email": "david.adeyemi@example.com",
+        "phoneNo": "08034567891",
+        "dateOfBirth": "1995/12/10",
+        "gender": "male",
+        "address": "67 Harmony St, Ibadan, Nigeria"
+    },
+    {
+        "fullName": "Fatima Bello",
+        "email": "fatima.bello@example.com",
+        "phoneNo": "08111223344",
+        "dateOfBirth": "2002/07/05",
+        "gender": "female",
+        "address": "23 New Layout, Kaduna, Nigeria"
+    },
+    {
+        "fullName": "Chinedu Eze",
+        "email": "chinedu.eze@example.com",
+        "phoneNo": "08155667788",
+        "dateOfBirth": "1989/10/30",
+        "gender": "male",
+        "address": "89 Old Market Rd, Enugu, Nigeria"
+    },
+    {
+        "fullName": "Amina Danjuma",
+        "email": "amina.danjuma@example.com",
+        "phoneNo": "08022334455",
+        "dateOfBirth": "1998/04/18",
+        "gender": "female",
+        "address": "34 Sunrise St, Kano, Nigeria"
+    },
+    {
+        "fullName": "Samuel Udo",
+        "email": "samuel.udo@example.com",
+        "phoneNo": "09066778899",
+        "dateOfBirth": "1992/09/25",
+        "gender": "male",
+        "address": "78 Victory Close, Uyo, Nigeria"
+    },
+    {
+        "fullName": "Blessing Nwachukwu",
+        "email": "blessing.nwachukwu@example.com",
+        "phoneNo": "07099887766",
+        "dateOfBirth": "2001/06/12",
+        "gender": "female",
+        "address": "56 Queens Rd, Owerri, Nigeria"
+    },
+    {
+        "fullName": "Henry Obinna",
+        "email": "henry.obinna@example.com",
+        "phoneNo": "08177665544",
+        "dateOfBirth": "1986/02/08",
+        "gender": "male",
+        "address": "90 Hilltop St, Aba, Nigeria"
+    },
+    {
+        "fullName": "Patricia Ojo",
+        "email": "patricia.ojo@example.com",
+        "phoneNo": "09033445566",
+        "dateOfBirth": "1994/11/14",
+        "gender": "female",
+        "address": "22 Creekside Rd, Port Harcourt, Nigeria"
+    },
+    {
+        "fullName": "Gideon Ayodele",
+        "email": "gideon.ayodele@example.com",
+        "phoneNo": "08055667788",
+        "dateOfBirth": "1996/05/27",
+        "gender": "male",
+        "address": "33 Kingsway, Osogbo, Nigeria"
+    },
+    {
+        "fullName": "Rebecca Ekanem",
+        "email": "rebecca.ekanem@example.com",
+        "phoneNo": "08199887766",
+        "dateOfBirth": "2003/01/19",
+        "gender": "female",
+        "address": "65 Marina Rd, Calabar, Nigeria"
+    },
+    {
+        "fullName": "Ahmed Yusuf",
+        "email": "ahmed.yusuf@example.com",
+        "phoneNo": "07022335544",
+        "dateOfBirth": "1987/07/08",
+        "gender": "male",
+        "address": "110 Federal Rd, Minna, Nigeria"
+    },
+    {
+        "fullName": "Esther Ibe",
+        "email": "esther.ibe@example.com",
+        "phoneNo": "09011223344",
+        "dateOfBirth": "1991/03/23",
+        "gender": "female",
+        "address": "48 Green Park, Benin City, Nigeria"
+    },
+    {
+        "fullName": "Anthony Chukwu",
+        "email": "anthony.chukwu@example.com",
+        "phoneNo": "08144556677",
+        "dateOfBirth": "1984/09/15",
+        "gender": "male",
+        "address": "77 Central Ave, Asaba, Nigeria"
+    },
+    {
+        "fullName": "Funke Oladejo",
+        "email": "funke.oladejo@example.com",
+        "phoneNo": "08066778899",
+        "dateOfBirth": "2000/08/02",
+        "gender": "female",
+        "address": "12 Lakeview Estate, Akure, Nigeria"
+    },
+    {
+        "fullName": "Joshua Anene",
+        "email": "joshua.anene@example.com",
+        "phoneNo": "07011224455",
+        "dateOfBirth": "1993/06/30",
+        "gender": "male",
+        "address": "55 Palm Grove Rd, Jos, Nigeria"
+    },
+    {
+        "fullName": "Helen Obiora",
+        "email": "helen.obiora@example.com",
+        "phoneNo": "09088997766",
+        "dateOfBirth": "1999/12/05",
+        "gender": "female",
+        "address": "88 Silver St, Makurdi, Nigeria"
+    },
+    {
+        "fullName": "Felix Okonkwo",
+        "email": "felix.okonkwo@example.com",
+        "phoneNo": "08177889900",
+        "dateOfBirth": "1983/11/11",
+        "gender": "male",
+        "address": "99 Broad Street, Awka, Nigeria"
+    },
+    {
+        "fullName": "Rita Nduka",
+        "email": "rita.nduka@example.com",
+        "phoneNo": "08033445522",
+        "dateOfBirth": "1997/02/28",
+        "gender": "female",
+        "address": "102 New Estate, Warri, Nigeria"
+    },
+    {
+        "fullName": "Joyce Bassey",
+        "email": "joyce.bas@example.com",
+        "phoneNo": "08033445522",
+        "dateOfBirth": "1997/02/28",
+        "gender": "female",
+        "address": "102 New Estate, Warri, Nigeria"
+    },
+    {
+        "fullName": "Miriam Bassey",
+        "email": "miriam.bas@example.com",
+        "phoneNo": "08033445522",
+        "dateOfBirth": "1997/02/28",
+        "gender": "female",
+        "address": "102 New Estate, Warri, Nigeria"
+    }
+]

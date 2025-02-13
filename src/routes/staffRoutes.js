@@ -13,7 +13,7 @@ const { verifyStaffToken } = require('../jwt/verifyToken');
 router.get('/staff/dashboard', verifyStaffToken, staffController.staff_dashboard_get);
 
 // Patient details route
-router.get('/patient/:id', verifyStaffToken, staffController.patient_details_get);
+// router.get('/patient/:id', verifyStaffToken, staffController.patient_details_get);
 
 
 

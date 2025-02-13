@@ -140,7 +140,7 @@ module.exports.patient_login_post = async (req, res) => {
         res.cookie('UserToken', userToken, { maxAge: 60 * 60 * 24 * 365 }); // Cookie expires in one year
 
         // Redirect to the admin dashboard
-        res.redirect(`/user/dashboard`);
+        res.redirect(`/patient/dashboard`);
     } catch (error) {
         console.log('Internal Server Error: ', error);
         return res.redirect(`/login/${role}`);

@@ -50,7 +50,7 @@ module.exports.add_medical_record_post = async (req, res) => {
 
     try {
         // Insert into the medical records table
-        const insertRecord = query('INSERT INTO medical_records (patient_id, doctor_id, diagnosis, treatment_plan) VALUES (?, ?, ?, ?)', [patientId, req.user[0].user_id, diagnosis, treatmentPlan]);
+        const insertRecord = query('INSERT INTO medical_records (patient_id, doctor, diagnosis, treatment_plan) VALUES (?, ?, ?, ?)', [patientId, req.user[0].full_name, diagnosis, treatmentPlan]);
 
         console.log('Successfully inserted record');
         return res.redirect('/staff/dashboard');
@@ -73,7 +73,7 @@ module.exports.add_treatment_post = async (req, res) => {
 
     try {
         // Insert into the medical records table
-        const insertTreatment = query('INSERT INTO treatment_history (user_id, treatment_description, treatment_date) VALUES (?, ?, ?)', [patientId, treatmentDescription, outcome]);
+        const insertTreatment = query('INSERT INTO treatment_history (user_id, treatment_description, outcome) VALUES (?, ?, ?)', [patientId, treatmentDescription, outcome]);
 
         console.log('Successfully added treatment');
         return res.redirect('/staff/dashboard');
